@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumbled Word Solver</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-qrcode"></i> Jumbled Word Solver</h1>
+            <p>Scan a QR Code to solve a jumbled word!</p>
+        </header>
+        <main>
+            <video id="video" autoplay></video>
+            <canvas id="canvas" hidden></canvas>
+            <p id="result"></p>
+            <button id="startScan"><i class="fas fa-camera"></i> Start Scanning</button>
+            <p id="solvedWord"></p>
+        </main>
+        <footer>
+            <p>Made with ❤️ by PRAYA LABS</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr"></script>
+    <script src="script3.js"></script>
+</body>
+</html>
+

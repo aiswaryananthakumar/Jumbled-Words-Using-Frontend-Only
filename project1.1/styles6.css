@@ -1,0 +1,228 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #ffdfba;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #6169ff;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* QR Code Scanner */
+#video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 2px solid #6164ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#startScan {
+    background-color: #6183ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startScan:hover {
+    background-color: #4ed6e5;
+}
+
+/* Results Section */
+#result {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+#result h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #616bff;
+}
+
+#result p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Students Section */
+#studentControls {
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#addStudentBtn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addStudentBtn:hover {
+    background-color: #3e8e41;
+}
+
+.student {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.student h3 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.removeStudentBtn {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.removeStudentBtn:hover {
+    background-color: #e33d3d;
+}
+
+/* Answer Sheet */
+#answerSheet {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#quizForm {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#quizForm label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#quizForm input {
+    width: calc(100% - 150px);
+    max-width: 500px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#quizForm input:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+#evaluateAllBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#evaluateAllBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Scores */
+#scores {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#scores p {
+    margin: 5px 0;
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    #result,
+    #studentControls,
+    #answerSheet {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    #quizForm input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #58e3ff, #26a1ff);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    background: #FFFFFF;
+    color: #333;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: 5px solid #4943ff;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #4343ff, #58eeff);
+    color: #fff;
+    padding: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px dashed #6026ff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    border: 5px solid #58e0ff;
+    border-radius: 15px;
+    margin: 15px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: linear-gradient(to right, #26fff4, #4369ff);
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(to right, #5c43ff, #3c26ff);
+    transform: scale(1.1);
+}
+
+#photoGallery {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#photoGallery h2 {
+    font-size: 24px;
+    color: #7243ff;
+}
+
+#photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#photos img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #58e9ff;
+    background: #fff;
+}

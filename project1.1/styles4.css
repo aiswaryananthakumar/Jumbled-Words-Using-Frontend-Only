@@ -1,0 +1,113 @@
+body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #FFD700, #FF4500);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    background: #fff;
+    color: #333;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 5px solid #FF6347;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #FF6347, #FFD700);
+    color: #fff;
+    padding: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px dashed #FF4500;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+video {
+    width: 100%;
+    max-width: 400px;
+    border: 5px solid #FFD700;
+    border-radius: 20px;
+    margin: 15px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: linear-gradient(to right, #FF6347, #FFD700);
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(to right, #FFD700, #FF6347);
+    transform: scale(1.1);
+}
+
+button i {
+    margin-right: 8px;
+}
+
+#result, #solvedWord {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #333;
+    font-weight: bold;
+    background: #FFEB3B;
+    padding: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background: #FF4500;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border-top: 5px dashed #FFD700;
+}
+
+footer p {
+    margin: 0;
+    font-size: 18px;
+}
+
+footer p a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}

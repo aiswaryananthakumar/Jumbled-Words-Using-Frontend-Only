@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #00ddff, #6610F2);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    background: #fff;
+    color: #333;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #00e1ff, #6610F2);
+    color: #fff;
+    padding: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+video {
+    width: 100%;
+    max-width: 400px;
+    border: 3px solid #007BFF;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: linear-gradient(to right, #007BFF, #6610F2);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #6610F2, #007BFF);
+    transform: scale(1.05);
+}
+
+button i {
+    margin-right: 5px;
+}
+
+#result, #solvedWord {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: #f8f9fa;
+    color: #333;
+    padding: 10px;
+    font-size: 12px;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}

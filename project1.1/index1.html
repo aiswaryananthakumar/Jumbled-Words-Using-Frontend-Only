@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jumbled Word Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #jumbled-word {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #007bff;
+    }
+
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #message {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    #hint {
+      font-style: italic;
+      color: #555;
+    }
+
+    #score {
+      font-weight: bold;
+      color: #28a745;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Jumbled Word Game</h1>
+    <p id="jumbled-word">Press "Start Game" to begin!</p>
+    <input type="text" id="guess" placeholder="Type your guess here">
+    <div>
+      <button id="submit-btn">Submit</button>
+      <button id="hint-btn">Hint</button>
+      <button id="start-btn">Start Game</button>
+    </div>
+    <p id="message"></p>
+    <p id="hint"></p>
+    <p id="score">Score: 0</p>
+  </div>
+  <script>
+    const words = [
+      "javascript",
+      "frontend",
+      "backend",
+      "developer",
+      "design",
+      "database",
+      "html",
+      "css",
+      "react",
+      "angular",
+    ];
+
+    let originalWord = "";
+    let jumbledWord = "";
+    let score = 0;
+
+    // DOM Elements
+    const jumbledWordElement = document.getElementById("jumbled-word");
+    const guessInput = document.getElementById("guess");
+    const messageElement = document.getElementById("message");
+    const hintElement = document.getElementById("hint");
+    const scoreElement = document.getElementById("score");
+
+    // Shuffle the letters of a word
+    function shuffleWord(word) {
+      const shuffled = word.split("").sort(() => Math.random() - 0.5).join("");
+      return shuffled === word ? shuffleWord(word) : shuffled;
+    }
+
+    // Start the game
+    document.getElementById("start-btn").addEventListener("click", () => {
+      const randomIndex = Math.floor(Math.random() * words.length);
+      originalWord = words[randomIndex];
+      jumbledWord = shuffleWord(originalWord);
+
+      jumbledWordElement.textContent = `Jumbled Word: ${jumbledWord}`;
+      guessInput.value = "";
+      messageElement.textContent = "";
+      hintElement.textContent = "";
+    });
+
+    // Submit the guess
+    document.getElementById("submit-btn").addEventListener("click", () => {
+      const userGuess = guessInput.value.trim().toLowerCase();
+
+      if (userGuess === originalWord) {
+        messageElement.textContent = "Correct! 🎉";
+        messageElement.style.color = "green";
+        score++;
+        scoreElement.textContent = `Score: ${score}`;
+        guessInput.value = "";
+      } else {
+        messageElement.textContent = "Incorrect. Try again! ❌";
+        messageElement.style.color = "red";
+      }
+    });
+
+    // Get a hint
+    document.getElementById("hint-btn").addEventListener("click", () => {
+      if (originalWord) {
+        hintElement.textContent = `Hint: The first letter is "${originalWord[0]}".`;
+      } else {
+        hintElement.textContent = "Start the game to get a hint!";
+      }
+    });
+  </script>
+</body>
+</html>

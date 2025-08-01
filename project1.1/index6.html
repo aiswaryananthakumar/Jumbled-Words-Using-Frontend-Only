@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumbled Words Quiz</title>
+    <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧩Jumbled Words Quiz</h1>
+            <h1>📸Ready, Set, Scan!🎯</h1>
+            <p>Scan the QR code to load the quiz, add students, and evaluate all answers!🎉</p>
+        </header>
+        <main>
+            <video id="video" autoplay></video>
+            <canvas id="canvas" hidden></canvas>
+            <button id="startScan">Start Scanning QR Code📸</button>
+            <div id="result">
+                <h2>Scanned Words</h2>
+                <p id="jumbledWords">Scan a QR code to load the jumbled words!</p>
+            </div>
+            <div id="studentControls">
+                <h2>Students</h2>
+                <button id="addStudentBtn">Add Student➕</button>
+                <div id="studentsList"></div>
+            </div>
+            <div id="answerSheet">
+                <h2>Answer Sheet</h2>
+                <form id="quizForm">
+                    <div id="studentsAnswers"></div>
+                    <button type="button" id="evaluateAllBtn">✅Evaluate All Answers🔍</button>
+                </form>
+                <div id="scores"></div>
+            </div>
+        </main>
+        <footer>
+            <p>🪄Made with ❤️ for little explorers!🧩</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr"></script>
+    <script src="script6.js"></script>
+</body>
+</html>
